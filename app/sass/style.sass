@@ -780,7 +780,139 @@ h3
 		transform: translateX(10%)
 //end popup style
 
+//start event detail page
+.event-detail-page
+	background: $light-blue
+.event-detail-header
+	background: url('../img/event-detail.png')
+	min-height: 585px
+	background-size: cover 
+	background-repeat: no-repeat
+	padding-top: 70px
+	color: #fff
+	h3 
+		color: #fff
+
+	.container-fluid 
+		width: 1160px
+		display: flex
+		align-items: center
+.detail-img-wrapper
+	position: relative
+	margin-right: 80px
+	img 
+		border: 17px solid $blue2
+		border-radius: 50%
+		z-index: 1
+		position: relative
+.detail-img-wrapper:before
+	content: url('../img/img-bg.svg')
+	position: absolute
+.event-detail-header__items
+	display: flex
+	margin-top: 17px 
+	margin-bottom: 40px
+	flex-wrap: wrap
+.event-date
+	color: $yellow
+	margin-bottom: 17px
+.event-detail-header
+	h3 
+		max-width: 450px
+	p 
+		max-width: 616px
+.event-detail-header__item
+	background: $yellow 
+	height: 32px
+	display: flex 
+	align-items: center
+	color: rgba(#000, .58)
+	padding: 0 23px
+	margin-right: 10px
+	border-radius: 20px
+//end event detail page
+.presentation
+	padding-bottom: 20px
+	h2 
+		text-align: center
+		justify-content: center
+		margin-bottom: 35px
+		margin-top: 38px
+.presentations-content
+	padding-top: 20px
+.presentation-time
+	color: $blue2
+	font-size: 28px
+	margin-bottom: 29px
+.presentation
+	.col-md-4 
+		margin-bottom: 30px
+.presentation-item 
+	background: #fff
+	box-shadow: 0 0 24px (#000, .04)
+	border-radius: 4px
+	padding: 36px 27px 27px 27px
+	display: flex 
+	flex-direction: column 
+	align-items: center 
+	justify-content: center
+	text-align: center
+	h3 
+		display: flex 
+		align-items: center
+		margin-bottom: 26px
+		img 
+			margin-right: 15px
+.presentation-item-text
+	color: #7183AD
+	margin-bottom: 12.5px
+.blue-button
+	height: 33px
+	background: $blue2
+	width: 120px
+	display: flex 
+	align-items: center 
+	justify-content: center 
+	color: #fff
+	font-size: 14px
+	border-radius: 20px
+	transition: all 0.5s
+	margin-bottom: 15px
+.blue-button:hover 
+	color: #fff 
+	background: $blue
+.presentation-item-detail
+	color: $blue2
+	img 
+		margin-left: 7px
+.presentations-content
+	position: relative
+.presentations-content:before
+	content: ""
+	height: calc(100% - 30px)
+	width: 3px
+	background: rgba(#0038B8, .85)
+	opacity: 0.4
+	display: block
+	position: absolute 
+	top: 0 
+	left: -15px
+.presentation-time
+	position: relative
+.presentation-circle
+	height: 12px 
+	width: 12px
+	background: $blue2
+	display: block
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	border-radius: 50%
+	left: -23.5px
+	border: 4px solid $light-blue
+	box-sizing: content-box
 @import "media"
+
 
 
 

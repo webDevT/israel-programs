@@ -108,6 +108,19 @@ $('.slider2').slick({
   ]
 });
 
+ if( window.innerWidth <= 768 ){
+$('.slider3').slick({
+  prevArrow: false,
+  nextArrow: false,
+  slidesToShow: 1,
+  dots: true
+});
+
+
+
+
+}
+
 
 $('.more').click(function(){
 		$(this).parent().find('.how-it-work__item-p').slideToggle();
@@ -116,3 +129,10 @@ $('.more').click(function(){
 
 
 });
+
+var oldWidth = window.innerWidth;
+window.onresize = function () {
+
+        location.reload();
+    
+};
