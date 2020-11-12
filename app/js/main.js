@@ -11,7 +11,30 @@ $('.filter-btn').click(function(){
 				
 	})
 
+$('.sign-in').click(function(){
+    $('.popup-login').fadeIn();
+    
+  });
 
+$('.sign-up').click(function(){
+    $('.popup-signup').fadeIn();
+    
+  });
+$('.popup-close').click(function(){
+    $('.popup').fadeOut();
+    
+  });
+
+jQuery(function($){
+  $(document).mouseup(function (e){ 
+    var div = $(".popup__content"); 
+    var div2 = $(".popup");
+    if (!div.is(e.target) 
+        && div.has(e.target).length === 0) {
+      div2.fadeOut();
+    }
+  });
+});
 
 $('body').on('click', '.password-control', function(){
 	if ($('#password-input').attr('type') == 'password'){
