@@ -1,9 +1,675 @@
 @import "vars"
 @import "fonts"
 
+//start global style
+body 
+	font-family: 'Avenir', sans-serif
+	font-weight: 500
+	padding-top: 81px
+	font-size: 16px
+ul 
+	padding-left: 0 
+	margin-bottom: 0
+	list-style: none
+a,
+a:hover 
+	text-decoration: none
+.container-fluid 
+	width: 1166px
+h1 
+	font-size: 56px
+	font-weight: 300
+	margin-bottom: 0
+	display: flex 
+	align-items: center
+	justify-content: center
+	img 
+		margin-right: 28px
+h2 
+	margin-bottom: 0
+	font-size: 46px
+	font-weight: 300
+	color: $blue2
+	display: flex 
+	align-items: center
+	img 
+		margin-right: 15px
+h3 
+	font-size: 27px
+	color: $blue2
+	font-weight: 500
+.section-header 
+	display: flex
+	justify-content: space-between 
+	align-items: center
+	padding-bottom: 30px
+.learn-more
+	color: $blue2
+	img 
+		margin-left: 8px
+//end global style
 
+// start header style 
+.header 
+	position: fixed 
+	width: 100% 
+	top: 0 
+	left: 0 
+	height: 81px
+	background: #fff
+	display: flex 
+	align-items: center
+	font-size: 17px
+	font-family: 'Avenir Book'
+	font-weight: 400
+	z-index: 999
+	.container-fluid 
+		width: 1350px
+		display: flex 
+		justify-content: space-between 
+		align-items: center
+.header__menu
+	ul 
+		display: flex
+		align-items: center
+		li 
+			margin-right: 49px
+		li:last-child 
+			margin-right: 0
+.logo a
+	color: #0038B8 
+	font-size: 30px
+	font-weight: 900
+	font-family: 'Avenir'
+.header__right
+	display: flex 
+	align-items: center
+.header__menu-link
+	color: #000
+.header__menu-link:hover,
+.header__menu-link.active
+	color: #0038B8
+	text-decoration: underline
+.header__search
+	margin-left: 29px
+.sign-up
+	margin-left: 16px
+.sign-in,
+.sign-up
+	cursor: pointer
+.header__user
+	display: none
+.btn__menu
+	display: none	
+// end header style	
 
+//start mainscreen style
+.main-screen 
+	padding-top: 9.115vw
+	padding-bottom: 4.922vw
+	color: #fff
+	background: url('../img/main-screen-bg.png')
+	background-position: center 
+	background-size: cover
+	text-align: center
+.main-screen__text
+	font-size: 20px
+	max-width: 600px
+	margin: 0 auto
+	margin-top: 0.677vw
+	margin-bottom: 2.708vw
+.main-screen__form-title
+	display: flex 
+	align-items: center
+	justify-content: center
+	span
+		width: 275px 
+		height: 1px
+		background: rgba(#fff, .2)
+		display: block
+.main-screen__form-title-text
+	margin: 0 12px
+	line-height: 1
+	font-size: 16px
+	color: rgba(#fff, .8)
+.main-screen__form
+	padding-top: 3.229vw
+	width: 748px
+	margin: 0 auto
+	input 
+		font-size: 16px
+	input[type="submit"]
+		margin-top: 30px
+		width: 100%
+		background: $yellow
+		height: 54px
+		border: none
+		color: rgba(#000, .8)
+		border-radius: 4px
+.main-screen__form-row
+	display: flex 
+	justify-content: space-between
+	input 
+		width: 48%		
+		background: transparent 
+		border: none
+		border-bottom: 1px solid rgba(#fff, .8)
+		outline: none
+		color: #fff
+		padding: 15px 15px
+	input::placeholder 
+		color: #fff
+	input:focus::placeholder
+		color: transparent
+.password
+	position: relative
+	width: 48%	
+	input 
+		width: 100%
+.password-control
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	right: 0
+	display: inline-block
+	width: 19px 
+	height: 13px
+	cursor: pointer
+	background: url('../img/eye.svg') 0 0 no-repeat
+.password-control.view
+	background: url('../img/eye-active.svg') 0 0 no-repeat
+//end main screen style
 
+//start slick style
+.slick-slider
+	position: relative
+	display: block
+	box-sizing: border-box
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	-webkit-touch-callout: none
+	-khtml-user-select: none
+	-ms-touch-action: pan-y
+	touch-action: pan-y
+	-webkit-tap-highlight-color: transparent
+.slick-list
+	position: relative
+	display: block
+	overflow: hidden
+	margin: 0
+	padding: 0
+.slick-list:focus
+	outline: none
+.slick-list.dragging
+	cursor: pointer
+	cursor: hand
+.slick-slider .slick-track,
+.slick-slider .slick-list
+	-webkit-transform: translate3d(0, 0, 0)
+	-moz-transform: translate3d(0, 0, 0)
+	-ms-transform: translate3d(0, 0, 0)
+	-o-transform: translate3d(0, 0, 0)
+	transform: translate3d(0, 0, 0)
+.slick-track
+	position: relative
+	top: 0
+	left: 0
+	display: block
+	margin-left: auto
+	margin-right: auto
+.slick-track:before,
+.slick-track:after
+	display: table
+	content: ''
+.slick-track:after
+	clear: both
+.slick-loading .slick-track
+	visibility: hidden
+.slick-slide
+	display: none
+	float: left
+	height: 100%
+	min-height: 1px
+[dir='rtl'] .slick-slide
+	float: right
+.slick-slide img
+	display: block
+.slick-slide.slick-loading img
+	display: none
+.slick-slide.dragging img
+	pointer-events: none
+.slick-initialized .slick-slide
+	display: block
+.slick-loading .slick-slide
+	visibility: hidden
+.slick-vertical .slick-slide
+	display: block
+	height: auto
+	border: 1px solid transparent
+.slick-arrow.slick-hidden
+	display: none
+//end slick style
+
+//start about style
+.about 
+	background: $light-blue
+	padding-top: 4.010vw
+	padding-bottom: 3.490vw
+	.container-fluid 
+		width: 1196px
+	.section-header
+		padding-left: 15px 
+		padding-right: 15px
+	.items_slider
+		
+.about-item
+	margin: 0 15px
+	border-radius: 4px
+	background: #fff
+	text-align: center
+	padding-bottom: 30px
+	img 
+		width: 100%
+	h3 
+		margin-top: 28px
+		margin-bottom:  12px
+	p 
+		max-width: 250px
+		margin: 0 auto
+		color: #7183AD 
+.slick-dots
+	display: flex
+	justify-content: center
+.learn-more--mobile
+	display: none
+//end about style
+
+//start how it work section
+.how-it-work
+	background: $blue
+	padding-top: 48px 
+	padding-bottom: 53px
+	color: #fff
+.section-header.section-header--white
+	padding-bottom: 3.385vw
+	h2 
+		color: #fff
+.how-it-work__item-header
+	display: flex
+	align-items: center
+	margin-bottom: 30px
+.how-it-work__item-num
+	width: 40px 
+	height: 40px
+	font-size: 22px
+	color: $yellow 
+	display: flex 
+	justify-content: center 
+	align-items: center
+	border: 2px solid $yellow
+	border-radius: 50%
+	margin-right: 10px
+.how-it-work__item-title
+	font-size: 20px
+	line-height: 1.2
+.how-it-work__item-text	
+	display: flex 
+	flex-direction: column 
+	justify-content: center
+	span 
+		font-size: 12px
+		line-height: 1
+.how-it-work__item p
+	margin-bottom: 30px
+.how-it-work__item p:last-child 
+	margin-bottom: 0
+.yellow-link
+	display: flex 
+	align-items: center
+	color: $yellow
+	margin-top: 25px
+	img 
+		margin-left: 15px
+.more 
+	display: none
+	.less 
+		display: none
+.more.active 
+	span 
+		display: none
+	span.less 
+		display: inline-block
+//end how it work section
+
+//start events section 
+.events-section
+	padding-top: 53px 
+.events-img__wrapper
+	position: relative
+	img 
+		width: 100%
+	.events-img__title
+		position: absolute
+		top: 50%
+		left: 50%
+		font-size: 20px
+		color: #fff
+		transform: translateY(-50%) translateX(-50%)
+		max-width: 90%
+		width: 310px
+.event-item
+	box-shadow: 0 0 24px rgba(0, 0, 0, .04)
+	margin-bottom: 48px
+	p 
+		margin-top: 56px 
+		margin-bottom: 35px
+		width: 310px
+		max-width: 90%
+		color: #7183AD
+.event-item__day
+	display: flex 
+	justify-content: center 
+	align-items: center
+	width: 108px 
+	height: 49px
+	position: absolute 
+	bottom: 0 
+	left: 50%
+	background: #fff
+	transform: translateY(50%) translateX(-50%)
+	border-radius: 28px
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .16)
+	color: #7183AD
+.event__presentation-items
+	display: flex
+	flex-wrap: wrap
+	padding-left: 29px 
+	padding-right: 29px
+	a 
+		display: flex 
+		justify-content: center 
+		align-items: center
+		width: 20%
+		margin-bottom: 16px
+		padding: 2px
+		border-radius: 50%
+		img 
+			max-width: 100%
+	a.yellow
+		border: 2px solid $yellow
+
+	img 
+		width: 49px
+		border-radius: 50%
+.event__presentation-title
+	font-size: 20px 
+	color: $blue2
+	margin-bottom: 17px
+.event__button
+	background: $blue2
+	display: flex 
+	width: 266px
+	max-width: 90%
+	height: 54px
+	margin: 0 auto
+	align-items: center
+	padding-left: 26px
+	padding-right: 20px
+	white-space: nowrap
+	color: #fff
+	border-radius: 28px
+	margin-bottom: 14px
+	img 
+		width: 22px
+		margin-left: 19px
+.event__button:hover 
+	color: #fff
+.event-text
+	font-size: 14px
+	color: $blue2
+//end events section 
+
+//start schools-section
+.schools-section
+	background: $light-blue
+	padding-top: 68px 
+	padding-bottom: 68px
+
+.slick-dots
+	li 
+		width: 19px
+		height: 19px
+		display: flex 
+		justify-content: center 
+		align-items: center
+		margin: 0 16px
+		border-radius: 50%
+		transition: all 0.5s
+		padding: 0
+		button
+			width: 8px
+			height: 8px
+			max-width: 8px
+			max-height: 8px
+			font-size: 0
+			border-radius: 50%
+			outline: none
+			background: rgba(#000, .2)
+			border: none 
+			transition: all 0.5s
+			padding: 0
+	li.slick-active 
+		border: 1px solid rgba(#0038B8, .2)
+		display: flex 
+		justify-content: center 
+		align-items: center
+		button 
+			width: 12px 
+			height: 12px 
+			max-width: 12px 
+			max-height: 12px
+			background: #0038B8
+.school-item__logo
+	width: 109px
+	position: absolute 
+	bottom: 0 
+	left: 50% 
+	transform: translateX(-50%) translateY(50%)
+.school-item
+	border-radius: 0
+	p 
+		margin-top: 0
+		min-height: 120px
+		margin-bottom: 15px
+		padding-bottom: 0
+	.learn-more
+		display: flex
+		justify-content: center
+		color: rgba($blue2, .8)
+		margin-bottom: 15px
+		img 
+			width: 7.15px
+	.learn-more:hover 
+		color: $blue
+.school-item__title
+	font-size: 28px 
+	color: $blue2
+	margin-top: 78px 
+	margin-bottom: 12px
+.school-item__footer
+	margin-top: 15px
+	padding-top: 25px 
+	padding-bottom: 25px
+	padding-left: 29px
+	padding-right: 29px
+	display: flex
+	border-top: 1px solid #EDEDED
+	img 
+		width: 50px
+		height: 50px
+		margin-right: 15px
+.school-item__footer-content
+	text-align: left
+	display: flex 
+	flex-direction: column
+	justify-content: center
+.school-footer__name
+	color: $blue2
+	font-size: 20px
+	line-height: 1
+.school-footer__position
+	color: #7183AD
+//end schools-section
+
+.footer
+	height: 472px
+	background: $light-blue
+	background-image: url('../img/footer.png')
+	background-size: cover
+	padding-top: 190px
+	color: #fff
+	.container-fluid
+		width: 980px
+.footer__content
+	display: flex 
+	justify-content: space-between
+	padding-bottom: 17px
+	border-bottom: 1px solid rgba(#fff, 0.48)
+	margin-bottom: 34px
+.footer__logo
+	a 
+		color: #fff 
+		font-size: 48px
+		font-weight: 900
+	a:hover 
+		color: #fff
+.copy 
+	font-size: 17px
+	font-family: 'Avenir Book'
+.footer__title
+	font-size: 28px
+.footer form 
+	width: 500px 
+	display: flex 
+	justify-content: space-between
+	margin-top: 28px
+	input[type="submit"]
+		background: $yellow
+		border: 1px solid #707070
+		border-radius: 4px
+		width: 148px 
+		height: 45px
+	input[type="email"]
+		width: 325px
+		background: transparent
+		border: none 
+		border-bottom: 1px solid rgba(#fff, 0.48)
+		color: #fff
+		outline: none
+		padding: 0 15px
+	input[type="email"]::placeholder 
+		color: #fff
+	input[type="email"]:focus::placeholder 
+		color: transparent
+.footer-bottom
+	display: flex 
+	justify-content: space-between 
+	align-items: center
+	a 
+		color: #fff
+.footer__menu
+	a 
+		margin-right: 40px
+		font-size: 17px
+		font-family: 'Avenir Book'
+.footer__social
+	a 
+		margin-left: 32px
+.copy--mobile
+	display: none
+
+.events-page
+	background: $light-blue
+	.about-item 
+		margin-left: 0
+		margin-right: 0
+.page-pagination
+	display: flex 
+	justify-content: center
+	align-items: center
+	span 
+		margin: 0 30px
+		color: $blue2
+.svg-circle
+	fill: #fff
+	stroke: rgba(0,56,184,0.85)
+.svg-arrow
+	fill: rgba(0,56,184,0.85)
+.page-pagination a:hover
+	.svg-circle
+		fill: rgba(0,56,184,0.85)
+		stroke: rgba(0,56,184,0.85)
+	.svg-arrow
+		fill: #fff
+.next 
+	svg 
+		transform: rotate(180deg)
+
+.event-header
+	height: 376px
+	background: $light-blue 
+	background-image: url('../img/event-bg.png')
+	background-size: cover
+	background-repeat: no-repeat
+	padding-top: 66px
+	color: #fff
+	h1 
+		text-align: center
+.filter
+	margin-top: 38px
+.filter__items
+	width: 100% 
+	display: flex 
+	justify-content: space-between
+.filter__select-wrapper
+	select 
+		border-radius: 4px
+		background: #fff
+		border: 1px solid #E0E0E0
+		height: 40px
+		padding-left: 15px 
+		padding-right: 15px
+		outline: none
+		cursor: pointer
+		width: 100%
+		appearance: none
+		background-image: url('../img/down.svg')
+		background-repeat: no-repeat
+		background-position: right 15px center
+
+	.select-label
+		margin-bottom: 10px
+.filter__select-wrapper:first-child 
+	width: 23%
+.filter__select-wrapper:nth-child(2),
+.filter__select-wrapper:nth-child(3)  
+	width: 13.823%
+.filter__select-wrapper:nth-child(4) 
+	width: 18.110%
+.filter__select-wrapper:nth-child(5) 
+	width: 18.985%
+.filter-btn
+	display: none
+.schools-page
+	.about-item
+		margin-left: 0 
+		margin-right: 0	
+	.learn-more
+		margin-bottom: 0
+		span 
+			margin-right: 5px
 @import "media"
 
 

@@ -3,18 +3,783 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
+@media only screen and (max-width : 1390px)
 	/**/
+	.header 
+		.container-fluid 
+			max-width: 90%
+	.container-fluid 
+		max-width: 90%
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1260px)
+	/**/
+	.school-item p
+		min-height: 170px
+	.school-item__title
+		font-size: 24px
+	.school-footer__name
+		font-size: 18px
+	.school-item__footer
+		padding-left: 15px 
+		padding-right: 0
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1140px)
+	/**/
+	.event__button
+		padding-left: 14px
+		padding-right: 10px
+		font-size: 14px
+		justify-content: center
+	.school-item__footer
+		padding-left: 10px
+		img 
+			margin-right: 5px
+			width: 40px 
+			height: 40px
+	.school-item__title
+		font-size: 20px
+	.filter__select-wrapper
+		.select-label
+			font-size: 14px
+
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
+	//start global style
+	body
+		font-size: 1.9vw
+	.container-fluid 
+		width: 86.957vw
+		padding-left: 0 
+		padding-right: 0
+	h2 
+		font-size: 3.8vw
+		img 
+			width: 4.55vw 
+	h3 
+		font-size: 3.35vw
+
+
+	//end global style
+
+	.header__user
+		display: block
+	.sign-in,
+	.sign-up,
+	.header__search
+		display: none
+	.logo 
+		order: 2
+	.header__menu
+		order: 1
+		ul 
+			display: none
+			z-index: 9999
+	body 
+		padding-top: 7.7vw
+	.header 
+		height: 7.7vw
+
+		.container-fluid 
+			width: 90.338vw
+			padding-left: 0 
+			padding-right: 0
+	.header__right
+		order: 3
+	.btn__menu 
+		display: block
+		cursor: pointer
+	.btn-row
+		width: 2.4vw
+		height: 0.24vw
+		background: #001A57
+		margin-bottom: 0.45vw
+		transition: all 0.5s
+	.btn-row:last-child 
+		margin-bottom: 0
+	.logo
+		display: flex 
+		align-items: center
+		justify-content: center
+		a
+			font-size: 3.6vw
+			line-height: 1
+	.header__user
+		img 
+			width: 3.75vw
+	.btn__menu.active
+		.btn-row:last-child 
+			display: none
+		.btn-row:first-child 
+			transform: rotate(45deg)
+			position: relative 
+			top: 0.7vw
+		.btn-row:nth-child(2)
+			transform: rotate(-45deg)
+	.header__menu ul.active 
+		display: block
+		background: #fff
+		position: absolute
+		bottom: 1vw
+		left: 0
+		transform: translateY(100%)
+		width: 100%
+		min-height: 110vh
+		padding-top: 3vw
+		li 
+			width: 90.338vw
+			margin: 0 auto
+			padding-bottom: 3vw
+	.header__menu-link
+		font-size: 3.35vw
+	//start main screen style
+	.main-screen 
+		padding-top: 7vw
+		padding-bottom: 5.5vw
+	h1 
+		font-size: 4.1vw
+	.main-screen__text
+		font-size: 2.4vw
+		max-width: 60vw
+	.main-screen__form input[type="submit"]
+		max-width: 100%
+		width: 100%
+		height: 6.5vw
+		margin-top: 3vw
+		
+	.password-control
+		width: 2.3vw
+		height: 1.55vw
+		background-size: 100%
+		img 
+			width: 100%
+
+	.main-screen__form input
+		font-size: 1.9vw
+	.main-screen__form-row input
+		padding: 1.8vw
+
+	.main-screen__form
+		width: 100%
+	.main-screen__form-title-text
+		font-size: 1.9vw
+		margin: 0 1.3vw
+		white-space: nowrap
+	.main-screen__form-title span
+		width: 100%
+	.main-screen__form
+		padding-top: 6.5vw
+	.main-screen__text
+		margin-bottom: 4vw
+	//end main screen style
+
+	//start about style 
+	.about .slick-dots
+		margin-top: 3.6vw
+	.slick-dots
+		li 
+			width: 2.25vw
+			height: 2.25vw
+			display: flex 
+			justify-content: center 
+			align-items: center
+			margin: 0 1.2vw
+			border-radius: 50%
+			transition: all 0.5s
+			padding: 0
+			button
+				width: 0.9vw
+				height: 0.9vw
+				max-width: 0.9vw
+				max-height: 0.9vw
+				font-size: 0
+				border-radius: 50%
+				outline: none
+				background: rgba(#000, .2)
+				border: none 
+				transition: all 0.5s
+				padding: 0
+		li.slick-active 
+			border: 1px solid rgba(#0038B8, .2)
+			button 
+				width: 1.4vw 
+				height: 1.4vw 
+				max-width: 1.4vw 
+				max-height: 1.4vw 
+				background: #0038B8
+	.about 
+		padding-top: 3.7vw
+		padding-bottom: 4.2vw
+	//end about style 
+
+	//start how it work style
+	.how-it-work__item
+		margin-bottom: 6vw
+		p 
+			margin-bottom: 1vw
+	.how-it-work__item-header
+		margin-bottom: 2vw
+	.yellow-link
+		margin-top: 0
+
+	//end how it work style
+
+	.school-item__title
+		font-size: 3.35vw
+	.school-item__footer
+		padding-left: 3.5vw
+		img
+			width: 6vw 
+			height: 6vw
+			margin-right: 1.8vw
+	.school-item p
+		min-height: 18vw
+	.school-footer__name
+		font-size: 2.4vw
+
+	.copy 
+		display: none
+	.copy--mobile
+		display: block
+	.footer__content
+		flex-direction: column
+		align-items: center
+	.footer
+		height: 68vw
+		background-position: bottom left -325vw
+		padding-top: 12vw
+		display: flex 
+		align-items: center
+
+	.footer form
+		flex-direction: column
+		width: 100%
+		input[type="submit"],
+		input[type="email"]
+			width: 100%
+	.footer__right
+		width: 100%
+	.footer__title
+		font-size: 3.35vw
+		text-align: center
+	.footer form
+		margin-top: 3vw
+	.footer form input[type="submit"]
+		margin-top: 2.75vw
+		height: 5.4vw
+		color: #fff
+	.footer form input[type="email"]
+		padding: 1.8vw
+	.footer__content
+		margin-bottom: 0 
+		padding-bottom: 0
+		border: none
+		margin-bottom: 4.8vw
+	.footer-bottom
+		flex-direction: column
+	.footer__menu
+		justify-content: space-between
+		display: flex
+		width: 100%
+		padding-bottom: 1.5vw
+		border-bottom: 1px solid rgba(#fff, 0.48)
+		margin-bottom: 3vw
+		a 
+			margin-right: 0
+			font-size: 2vw
+	.footer__social
+		padding-bottom: 3vw
+		a
+			margin-left: 3vw
+		a:first-child 
+			margin-left: 0
+		img 
+			height: 2vw
+	.copy--mobile
+		text-align: center
+		font-size: 2vw
+	.footer__logo a
+		font-size: 6vw
+	h1 
+		flex-direction: column
+		img 
+			margin-bottom: 1.3vw
+			margin-right: 0
+	.filter__items
+		display: none
+	.event-header
+		height: 35vw
+		padding-top: 7vw
+	.filter-btn
+		display: flex
+		background: $yellow
+		width: 20vw
+		margin: 0 auto
+		padding-left: 3vw
+		padding-right: 2.6vw
+		justify-content: space-between
+		height: 4.7vw
+		align-items: center
+		border-radius: 2.4vw
+		color: rgba(#000, 0.58)
+		cursor: pointer
+	.filter 
+		margin-top: 2.1vw
+	.filter-row
+		width: 1.6vw
+		height: 0.15vw
+		background: rgba(#000, 0.58)
+		margin-bottom: 0.35vw
+	.filter-row:last-child 
+		margin-bottom: 0
+	.filter-btn.active 
+		.filter-row:last-child 
+			display: none
+		.filter-row:first-child 
+			transform: rotate(45deg)
+			position: relative 
+			top: 0.55vw
+		.filter-row:nth-child(2)
+			transform: rotate(-45deg)
+	.event-header.active
+		height: auto
+		padding-bottom: 20vw
+
+
+
+		.filter-btn
+			width: 100%
+		.filter__items
+			display: flex
+			flex-direction: column
+			width: 74.396vw
+			margin: 0 auto
+			padding-bottom: 3.1vw
+			select 
+				margin-top: 1.2vw
+			.filter__select-wrapper
+				width: 100%
+
+		.select-label
+			display: none
+		.filter
+			background: $yellow
+			border-radius: 4.831vw
+			padding-top: 1vw
+			overflow: hidden
+
+
+
+
+		
+
+			
+
+
+
+
+
+
+
+
+
+
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
+
+	//start-global style
+	body 
+		padding-top: 15.459vw
+		font-size: 3.865vw
+	h2 
+		font-size: 7.729vw
+		
+		img
+			width: 9.179vw
+			display: block
+			margin-right: 0
+	h3 
+		font-size: 6.763vw
+	.section-header 
+		width: 100%
+		padding-bottom: 5.797vw
+		h2
+			display: flex 
+			align-items: center
+			flex-direction: column
+			justify-content: center
+			text-align: center
+			width: 100%
+			img 
+				margin-bottom: 1.208vw
+		.learn-more 
+			display: none
+	//end global style
+
+	.header 
+		height: 15.459vw
+	.btn-row
+		width: 4.831vw
+		height: 0.483vw
+		margin-bottom: 0.966vw
+	.logo
+		a
+			font-size: 7.246vw
+	.header__user
+		img 
+			width: 7.729vw
+	.btn__menu.active
+		.btn-row:first-child 
+			top: 1.4vw
+	.header__menu ul.active 
+		padding-top: 6vw
+		li
+			padding-bottom: 6.039vw
+	.header__menu-link
+		font-size: 6.763vw
+	//start main screen style
+	.main-screen 
+		padding-top: 14.010vw
+		padding-bottom: 11.111vw
+	h1 
+		font-size: 8.213vw
+	.main-screen__text
+		font-size: 4.831vw
+		max-width: 87.681vw
+	.main-screen__form input[type="submit"]
+		height: 13.043vw	
+		margin-top: 6.039vw	
+	.password-control
+		width: 4.758vw
+		height: 3.140vw
+	.main-screen__form input
+		font-size: 3.865vw
+	.main-screen__form-title-text
+		font-size: 3.865vw
+		margin: 0 2.657vw
+	.main-screen__form
+		padding-top: 13.043vw
+	.main-screen__text
+		margin-bottom: 8.092vw
+	.main-screen__form-row
+		flex-direction: column
+		input 
+			width: 100%
+	.password
+		width: 100%
+		input
+			margin-top: 4.831vw
+	//end main screen style
+
+	//start about style
+	.about-item
+		padding-bottom: 6.763vw
+		margin-left: 0 
+		margin-right: 0
+		p 
+			font-size: 3.865vw
+			max-width: 60vw
+		h3 
+			margin-top: 7.246vw 
+			margin-bottom: 3.865vw
+	.about .slick-dots
+		margin-top: 7.246vw
+	.slick-dots
+		li 
+			width: 4.589vw
+			height: 4.589vw
+			display: flex 
+			justify-content: center 
+			align-items: center
+			margin: 0 2.415vw
+			border-radius: 50%
+			transition: all 0.5s
+			button
+				width: 1.932vw
+				height: 1.932vw
+				max-width: 1.932vw
+				max-height: 1.932vw
+				font-size: 0
+				border-radius: 50%
+				outline: none
+				background: rgba(#000, .2)
+				border: none 
+				transition: all 0.5s
+				padding: 0
+		li.slick-active 
+			border: 1px solid rgba(#0038B8, .2)
+			button 
+				width: 2.899vw 
+				height: 2.899vw 
+				max-width: 2.899vw 
+				max-height: 2.899vw 
+				background: #0038B8
+	.about 
+		padding-top: 7.488vw
+		padding-bottom: 8.454vw
+	.about .section-header
+		padding-left: 0
+		padding-right: 0
+	.learn-more--mobile
+		display: flex
+		justify-content: center
+		margin-top: 4.831vw
+	.learn-more
+		img 
+			width: 1.727vw
+			margin-left: 1.932vw
+	.section-header.section-header--white
+		h2 
+			display: flex
+			flex-direction: row
+			justify-content: flex-start
+			img 
+				margin-right: 2.415vw
+	//end about style
+
+	//start how it work 
+	.how-it-work
+		padding-top: 9.903vw
+		padding-bottom: 11.111vw
+	.section-header.section-header--white
+		padding-bottom: 4.589vw
+	.how-it-work__item
+		margin-bottom: 7.246vw
+	.how-it-work__item-num
+		height: 9.662vw
+		width: 9.662vw
+		font-size: 5.314vw
+		margin-right: 2.415vw
+	.how-it-work__item-title
+		font-size: 4.831vw
+	.how-it-work__item-text span
+		font-size: 2.899vw
+	.how-it-work__item-header
+		margin-bottom: 4.106vw
+	.how-it-work__item
+
+		p 
+			
+			margin-left: 12.077vw
+			margin-bottom: 6.039vw
+	.how-it-work__item-p
+		margin-bottom: 4vw
+		display: none
+	.more 
+		display: block
+		color: #fff
+		margin-left: 12.077vw
+		cursor: pointer
+		img 
+			margin-left: 1.208vw
+			width: 1.727vw
+	//end how it work
+	//start evrnt section 
+	.events-img__wrapper .events-img__title
+		font-size: 4.831vw
+		max-width: 85%
+		width: 85%
+	.event-item__day
+		width: 26.087vw
+		height: 11.836vw
+	.about-item.event-item p
+		width: 95% 
+		max-width: 95%
+		margin-top: 13.527vw
+		margin-bottom: 7.005vw
+	.event__presentation
+		display: none
+	.event__button
+		width: 64.251vw
+		height: 13.043vw
+		border-radius: 10vw
+		font-size: 3.865vw
+		padding-left: 6.280vw
+		padding-right: 4.831vw
+		img 
+			width: 5.314vw
+			margin-left: 4.589vw
+	.event-text
+		font-size: 3.382vw
+	.about-item.event-item
+		margin-bottom: 3.865vw
+	.events-section
+		padding-top: 8.213vw
+		padding-bottom: 6.039vw
+	.school-item__title
+		font-size: 6.763vw
+		margin-top: 16vw
+		margin-bottom: 0
+	.school-item__footer
+		padding-left: 7.005vw
+		img
+			width: 12.077vw
+			height: 12.077vw
+			margin-right: 3.623vw
+	.school-footer__name
+		font-size: 4.831vw
+	.school-item__logo
+		width: 26.329vw
+	.about-item.event-item p
+		margin-top: 11vw
+		margin-bottom: 5.314vw
+	.school-item__footer
+		margin-top: 7.246vw
+		padding-top: 6.039vw
+		padding-bottom: 6.039vw
+	.footer__content
+		flex-direction: column
+		align-items: center
+	.footer
+		height: 135.749vw
+		background-position: bottom left -325vw
+		padding-top: 23vw
+		display: flex 
+		align-items: center
+
+	.footer form
+		flex-direction: column
+		width: 100%
+		input[type="submit"],
+		input[type="email"]
+			width: 100%
+	.footer__right
+		width: 100%
+	.footer__title
+		font-size: 6.763vw
+		text-align: center
+	.footer form
+		margin-top: 3vw
+	.footer form input[type="submit"]
+		margin-top: 5.556vw
+		height: 10.870vw
+		color: #fff
+	.footer form input[type="email"]
+		padding: 3.623vw
+	.footer__content
+		margin-bottom: 0 
+		padding-bottom: 0
+		border: none
+		margin-bottom: 9.662vw
+	.footer-bottom
+		flex-direction: column
+	.footer__menu
+		justify-content: space-between
+		display: flex
+		width: 100%
+		padding-bottom: 3vw
+		border-bottom: 1px solid rgba(#fff, 0.48)
+		margin-bottom: 6vw
+		a 
+			margin-right: 0
+			font-size: 4.106vw
+	.footer__social
+		padding-bottom: 6vw
+		a
+			margin-left: 6.039vw
+		a:first-child 
+			margin-left: 0
+		img 
+			height: 4.106vw
+	.copy--mobile
+		text-align: center
+		font-size: 4.106vw
+	.footer__logo a
+		font-size: 11.594vw
+	.events-page
+		.about-item.event-item p
+			display: none
+		.event__button
+			margin-top: 12.560vw
+	.page-pagination
+		margin-top: 7.246vw
+	h1 
+		flex-direction: column
+		img 
+			margin-bottom: 2.657vw
+			width: 8.454vw
+			margin-right: 0
+	.filter__items
+		display: none
+	.event-header
+		height: 70.290vw
+		padding-top: 14.493vw
+	.filter-btn
+		display: flex
+		background: $yellow
+		width: 39.614vw
+		margin: 0 auto
+		padding-left: 5vw
+		padding-right: 5.314vw
+		justify-content: space-between
+		height: 9.420vw
+		align-items: center
+		border-radius: 4.831vw
+		color: rgba(#000, 0.58)
+		cursor: pointer
+	.filter 
+		margin-top: 4.348vw
+	.filter-row
+		width: 3.382vw
+		height: 0.345vw
+		background: rgba(#000, 0.58)
+		margin-bottom: 0.7vw
+	.filter-row:last-child 
+		margin-bottom: 0
+	.filter-btn.active 
+		.filter-row:last-child 
+			display: none
+		.filter-row:first-child 
+			transform: rotate(45deg)
+			position: relative 
+			top: 1.1vw
+		.filter-row:nth-child(2)
+			transform: rotate(-45deg)
+	.event-header.active
+		height: auto
+		padding-bottom: 43vw
+
+
+
+		.filter-btn
+			width: 100%
+		.filter__items
+			display: flex
+			flex-direction: column
+			width: 74.396vw
+			margin: 0 auto
+			padding-bottom: 6.280vw
+			select 
+				margin-top: 2.415vw
+			.filter__select-wrapper
+				width: 100%
+
+		.select-label
+			display: none
+		.filter
+			background: $yellow
+			border-radius: 4.831vw
+			padding-top: 2vw
+	.schools-page
+		.learn-more
+			text-transform: capitalize
+			span 
+				display: none
+
+		.school-item__footer
+			display: none
+		p 
+			display: none
+
+
+
 
 
 /* Extra Small Devices, Phones */
