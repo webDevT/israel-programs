@@ -47,6 +47,27 @@ h3
 	color: $blue2
 	img 
 		margin-left: 8px
+input,
+textarea
+	width: 100%
+	border: 1px solid #EDEDED
+	padding: 0 15px	
+	border-radius: 4px
+input
+	height: 40px
+	outline: none
+textarea 
+	padding-top: 12px	
+	outline: none
+input[type="submit"]
+	background: $blue2
+	color: #fff
+input::placeholder, 
+textarea::placeholder
+	color: #8298AB
+input:focus::placeholder,
+textarea:focus::placeholder  
+	color: transparent
 //end global style
 
 // start header style 
@@ -141,6 +162,7 @@ h3
 	margin: 0 auto
 	input 
 		font-size: 16px
+		border-radius: 0
 	input[type="submit"]
 		margin-top: 30px
 		width: 100%
@@ -585,6 +607,7 @@ h3
 		color: #fff
 		outline: none
 		padding: 0 15px
+		border-radius: 0
 	input[type="email"]::placeholder 
 		color: #fff
 	input[type="email"]:focus::placeholder 
@@ -969,6 +992,55 @@ h3
 	font-size: 28px
 .fast-answer-text
 	font-size: 20px
+
+//start contact style
+.map 
+	height: 465px
+	background: url('../img/map.png')
+	background-size: cover
+.contact-content
+	background: $light-blue
+	padding-top: 53px
+	padding-bottom: 80px
+	margin-bottom: 84px
+.contact-title
+	font-size: 28px 
+	color: $blue2
+.contact-item
+	display: block
+	color: $blue2
+	font-size: 20px
+.contact-form-wrapper
+	width: 367px 
+	background: #fff
+	padding: 40px 35px 50px 40px
+	margin-top: -323px
+	box-shadow: 0 0 24px rgba(#000, 0.04)
+	border-radius: 4px
+	input 
+		margin-bottom: 19px
+	textarea 
+		margin-bottom: 0
+		height: 117px
+	input[type="submit"]
+		margin-bottom: 0
+		margin-top: 22px
+		transition: all 0.5s
+	input[type="submit"]:hover 
+		background: $blue
+.contact-form__text
+	color: #7183AD
+	margin-bottom: 18px
+	margin-top: 3px
+.contact-content
+	.container-fluid
+		max-width: 1033px
+.fast-answer__section
+	.container-fluid 
+		display: flex 
+		justify-content: center
+//end contact style
+
 @import "media"
 
 
