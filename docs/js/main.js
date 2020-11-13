@@ -11,6 +11,14 @@ $('.filter-btn').click(function(){
 				
 	})
 
+$('.faq__header').click(function(){
+    $(this).parent().find('.faq__text').slideToggle();   
+    $(this).toggleClass('active');
+  })
+
+
+
+
 $('.sign-in').click(function(){
     $('.popup-login').fadeIn();
     
