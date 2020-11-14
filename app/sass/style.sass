@@ -1389,8 +1389,7 @@ input[type=file]::-webkit-file-upload-button
 	cursor: pointer
 	img 
 		margin-left: 12px
-.popup-new-event
-	display: block
+
 .popup__content--new-event
 	width: 1142px
 	.input-col
@@ -1634,7 +1633,301 @@ input[type=file]::-webkit-file-upload-button
 		max-width: 500px
 
 //end philosophy
+.register-page-title
+	font-size: 32px 
+	font-weight: 300
+.register-page-head
+	padding-top: 40px
+.register-student
+	background: $light-blue
+	padding: 50px 0
 
+.register-table
+	width: 100%
+	width: 1143px
+	margin-bottom: 50px
+.register-table__row
+	display: flex
+	background: red
+	border-left: 1px solid #fff
+	border-right: 1px solid #fff
+	border-bottom: 1px solid #fff
+	.register-table__col
+		border-right: 1px solid #EDEDED
+		img 
+			margin-left: 29px
+	.register-table__col:first-child 
+		width: 372px
+	.register-table__col:nth-child(2) 
+		width: 288px
+	.register-table__col:nth-child(3) 
+		width: 237px
+	.register-table__col:nth-child(4) 
+		width: 244px
+		border-right: none
+.register-table__row.register-table-row--header
+	background: $blue
+	font-size: 17px
+	color: #fff
+	.register-table__col
+		display: flex 
+		justify-content: center 
+		align-items: center
+		font-size: 17px
+		
+	.register-table__col:first-child 
+		justify-content: space-between
+
+.register-table__row
+	background: #fff
+.register-table__row.register-table__row--blue
+	background: #F3F5FC
+.header-table__right
+	color: $yellow
+
+.register-table__col
+	padding: 20px 20px
+	display: flex 
+	align-items: center
+	justify-content: center
+	font-size: 20px
+.register-table__col:first-child 
+	justify-content: space-between
+.register-table__col--red
+	color: #C40000
+.reg-student-popup
+	.popup-header
+		padding-left: 65px
+		padding-right: 56px
+	.popup__content
+		width: 1218px
+		padding-left: 0 
+		padding-right: 0
+		padding-bottom: 0
+.reg-student-popup__header
+	display: flex
+.reg-student-popup__content
+	display: flex
+	width: 100%
+.reg-student-popup__left
+	width: 40%
+	.reg-student-popup__header
+		width: 100%
+		background: $blue
+		padding-left: 52px
+	.reg-student-popup__content
+		height: 100%
+		background: #fff
+		padding: 50px
+		display: flex 
+		flex-direction: column
+	.about-item.event-item
+		padding-bottom: 0
+		margin-bottom: 0
+		background: transparent
+		box-shadow: none
+		margin-bottom: 100px
+	.about-item.event-item:last-child 
+		margin-bottom: 0
+
+.reg-student-popup__right
+	width: 60%
+	.reg-student-popup__header
+		padding-right: 52px
+		background: $blue
+		padding-left: 30px
+	.reg-student-popup__content
+		background: $light-blue
+		height: 100%
+		padding: 36px 19px
+		display: block
+
+.reg-student-popup__header
+	font-size: 26px
+	color: #fff
+	padding-top: 15px 
+	padding-bottom: 15px
+.reg-content__item-wrapper
+	
+.reg-content__item
+	display: flex
+	align-items: flex-start
+	width: 50%
+	padding: 17px 
+	position: relative
+	.reg-content-photo
+		margin-right: 16px
+
+.reg-content__row
+	display: flex
+	justify-content: space-between
+.reg-content__item-time
+	font-size: 14px
+	color: #7183AD
+.reg-content__item-text
+	font-size: 18px 
+	color: $blue2
+.reg-content__item.absent
+	background: #F0E2E2
+.reg-content__item-label
+	position: absolute
+	top: 0 
+	right: 0
+	padding: 0px 8px
+	background: #fff
+	color: #C40000
+.section-header--edit
+	padding-top: 50px
+	padding-bottom: 50px
+	align-items: flex-end
+	h2 
+		margin-top: 0 
+		margin-bottom: 0
+.send-invitation-btn
+	background: $blue2
+	color: #fff
+	width: 200px 
+	height: 39px
+	display: flex
+	justify-content: center 
+	align-items: center
+	border-radius: 20px
+	cursor: pointer
+	img 
+		margin-left: 12px
+
+.presentation-item--slot
+	height: 249.5px
+	cursor: pointer
+	.slot-title
+		font-size: 28px
+		color: #7183AD
+		margin-top: 24px
+.buttons-edit-wrapper
+	display: flex
+	.blue-button
+		width: 76px
+	.red-button
+		margin-left: 12px
+		background: #C30B0B
+.full-slot-wrapper
+	display: flex
+.full-slot
+	margin-left: 10px
+	color: #C30B0B
+
+.invitation-checkbox-wrapper
+	display: flex
+
+.invitation-checkbox-wrapper
+	display: flex 
+	align-items: center
+	margin-bottom: 22px
+	label 
+		margin-bottom: 0
+	.check-label
+		width: 27px 
+		height: 27px
+		background: #F3F5FC
+		border-radius: 3px
+		border: 1px solid #B2C4ED
+		margin-right: 19px
+		cursor: pointer
+		display: flex 
+		justify-content: center
+		align-items: center
+	.check-label::before 
+		content: ''
+		height: 14px 
+		width: 14px 
+		background: $blue2
+		display: block
+		opacity: 0
+	.checkbox-text-label
+		color: #7183AD
+		font-size: 20px
+		cursor: pointer
+	input 
+		display: none
+	input[type="checkbox"]:checked + .check-label::before
+		opacity: 1
+.invitation-popup-footer
+	display: flex
+	justify-content: center
+	padding-top: 50px
+.popup-new-presentation
+
+	.input-wrapper
+		margin-bottom: 26px
+		textarea 
+			height: 176px
+		.present-image-wrapper
+			width: 80%
+			.event-button
+				width: 146px
+				height: 37px
+			.event-button--blue
+				margin-bottom: 20px
+.popup-pres-footer
+	margin-top: 30px
+.student-admin
+	padding-top: 100px
+.sudent-admin__tabs
+	width: 445px
+	display: flex
+	margin: 0 auto
+	justify-content: space-between
+	font-size: 20px
+	color: $blue	
+	padding-bottom: 50px
+.student-admin-tab
+	cursor: pointer	
+.student-admin-tab.active 
+	text-decoration: underline
+.student-admin
+	background: $light-blue
+.student-admin-form
+	width: 445px
+	margin: 0 auto
+	padding-bottom: 50px
+	.input-wrapper
+		margin-bottom: 25px
+.input-pass
+	margin-top: 15px
+.student-tab-content-item
+	display: none
+.student-tab-content-item:first-child
+	display: block
+.student-admin__head
+	display: flex 
+	justify-content: space-between
+	align-items: flex-end
+	padding-bottom: 60px
+.sel-wrap
+	display: flex
+
+	select 
+		width: 215px
+		margin-right: 22px
+.presentation-item--reserved
+	.blue-button
+		background: $yellow
+		width: auto
+		padding: 0 15px
+.upcoming-ivents-wrapper
+	padding-top: 38px
+	padding-bottom: 40px
+	border-bottom: 1px solid #7183AD
+.upcoming-event__date
+	font-size: 20px
+	color: $blue2
+	margin-bottom: 16px
+.upcoming-event__title
+	max-width: 440px
+	margin-bottom: 39px
+.upcoming-ivents-wrapper:last-child 
+	border-bottom: 0
+	padding-bottom: 120px
 @import "media"
 
 

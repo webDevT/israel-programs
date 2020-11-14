@@ -17,6 +17,21 @@ $('.faq__header').click(function(){
   })
 
 
+$('.export-list').click(function(){  
+    $('.reg-student-popup').fadeIn();
+  })
+
+
+$('.send-invitation-btn').click(function(){  
+    $('.popup-invitation').fadeIn();
+  })
+
+$('.presentation-item--slot').click(function(){  
+    $('.popup-new-presentation').fadeIn();
+  })
+
+
+
 
 
 $('.sign-in').click(function(){
@@ -70,6 +85,11 @@ $('.new-page').click(function(){
   $(".tab-content").hide().eq($(this).index()).fadeIn()
 }).eq(0).addClass("active");
 
+
+  $(".student-admin-tab").click(function() {
+  $(".student-admin-tab").removeClass("active").eq($(this).index()).addClass("active");
+  $(".student-tab-content-item").hide().eq($(this).index()).fadeIn()
+}).eq(0).addClass("active");
 // $('.edit').click(function(){
 //     $(this).parent().attr("contenteditable", true);
     
@@ -217,20 +237,20 @@ $('.slider3').slick({
 }
 
 
- if( window.innerWidth <= 768){
-window.onresize = function () {
-
-        location.reload();
-    
-};
- }
-
-// var oldWidth = window.innerWidth;
+//  if( window.innerWidth <= 768){
 // window.onresize = function () {
 
 //         location.reload();
     
 // };
+//  }
+
+var oldWidth = window.innerWidth;
+window.onresize = function () {
+
+        location.reload();
+    
+};
 
 
 $('.more').click(function(){
