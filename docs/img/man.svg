@@ -1,0 +1,5 @@
+<svg id="Man" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <rect id="Area" width="20" height="20" fill="none"/>
+  <circle id="Background_1" data-name="Background 1" cx="3" cy="3" r="3" transform="translate(7 4)" fill="none"/>
+  <path id="Border" d="M1.5,14.5H0A8.018,8.018,0,0,1,5.313,6.962a4,4,0,1,1,5.375,0A8.02,8.02,0,0,1,16,14.5H14.5a6.5,6.5,0,1,0-13,0ZM8,1.5A2.5,2.5,0,1,0,10.5,4,2.5,2.5,0,0,0,8,1.5Z" transform="translate(2 2.5)" fill="#304659"/>
+</svg>

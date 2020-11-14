@@ -245,12 +245,12 @@ $('.slider3').slick({
 // };
 //  }
 
-var oldWidth = window.innerWidth;
-window.onresize = function () {
+// var oldWidth = window.innerWidth;
+// window.onresize = function () {
 
-        location.reload();
+//         location.reload();
     
-};
+// };
 
 
 $('.more').click(function(){
