@@ -48,12 +48,14 @@ h3
 	img 
 		margin-left: 8px
 input,
-textarea
+textarea,
+select
 	width: 100%
 	border: 1px solid #EDEDED
 	padding: 0 15px	
 	border-radius: 4px
-input
+input,
+select
 	height: 40px
 	outline: none
 textarea 
@@ -68,6 +70,14 @@ textarea::placeholder
 input:focus::placeholder,
 textarea:focus::placeholder  
 	color: transparent
+select 
+	cursor: pointer
+	width: 100%
+	appearance: none
+	background-image: url('../img/down.svg')
+	background-repeat: no-repeat
+	background-position: right 15px center
+	color: #7183AD
 //end global style
 
 // start header style 
@@ -906,8 +916,62 @@ textarea:focus::placeholder
 	background: $blue
 .presentation-item-detail
 	color: $blue2
+	cursor: pointer
 	img 
 		margin-left: 7px
+
+.presentation-item
+	position: relative
+.presentation-details-popup-wrap
+	bottom: 60px
+	position: absolute
+	display: none
+	z-index: 99999999
+.presentation-details-popup
+	background: #fff
+	
+	width: 100%
+	padding: 36px
+	border-radius: 4px
+	display: flex 
+	flex-direction: column
+	align-items: center
+	box-shadow: 0 0 24px rgba(#000, .04)
+	
+	p 
+		color: #7183AD
+		max-width: 95%
+		padding-bottom: 17px
+.presentation-popup__user-info
+	display: flex 
+	align-items: center
+	text-align: left
+	width: 100%
+	img 
+		margin-right: 15px
+.presentation-popup__user-name
+	font-size: 20px
+	color: $blue2
+.presentation-popup__user-position
+	color: #7183AD
+.presentation-popup__footer
+	display: flex 
+	justify-content: space-between
+	width: 100%
+	align-items: flex-end
+	padding-top: 30px
+	.blue-button
+		margin-bottom: 0
+.presentation-popup__footer-right
+	display: flex
+	flex-direction: column
+	align-items: flex-end
+.presentation-popup__close
+	color: #7183AD
+	cursor: pointer
+.presentation-popup__footer-text
+	font-size: 14px 
+	color: $blue2
 .presentations-content
 	position: relative
 .presentations-content:before
@@ -1039,9 +1103,541 @@ textarea:focus::placeholder
 	.container-fluid 
 		display: flex 
 		justify-content: center
+.school-about-items
+	display: flex 
+	justify-content: center
+	align-items: center
+	margin-top: 36px
+	.event-detail-header__item
+		margin: 0 30px
+		img 
+			margin-left: 16px
 //end contact style
 
+//start school page
+.school-page
+	background: $light-blue
+	padding-bottom: 80px
+	.events-section
+		h2 img 
+			display: none
+.school-single
+	padding-top: 50px
+.single-school-img
+	width: 100%
+.school-single__detail
+	display: flex 
+	justify-content: center
+	margin-top: 48px
+	margin-bottom: 53px
+.school-single__item
+	font-size: 21px
+	color: $blue2
+	text-decoration: underline
+	cursor: pointer	
+	display: flex 
+	align-items: center
+	img 
+		margin-left: 11px
+.school-single__item:hover 
+	color: $blue2
+	text-decoration: underline
+span.school-single__item 
+	margin-right: 53px
+.school-single__title
+	font-size: 28px
+	color: $blue2 
+	margin-bottom: 23px
+.school-single__text-content
+	p 
+		margin-bottom: 23px
+		color: #7183AD
+		max-width: 90%
+.popup-cumpus-content
+	img 
+		width: 100%	
+		margin-bottom: 39px
+.popup-cumpus,
+.popup-about,
+.popup-missions
+	.popup__content
+		border-radius: 72px
+		width: 1234px
+		max-width: 95%
+	.school-single__text-content
+		padding-bottom: 0
+.popup 
+
+	overflow-y: auto
+	padding-bottom: 10vw
+.edit 
+	font-size: 20px
+.school-head
+	img 
+		cursor: pointer
+	h1 
+		.editeble-wrapper
+			position: relative
+			display: block
+		.editebl-div
+			outline: none
+			border: 1px solid #fff
+			padding: 15px 57px 
+			display: block
+.edit 
+	position: absolute
+	display: inline-block
+	top: 50% 
+	transform: translateY(-50%) translateX(100%)
+	top: 50%
+	cursor: pointer
+	display: flex 
+	align-items: center
+	img 
+		margin-right: 6px
+	input 
+		position: absolute
+		width: 100% 
+		height: 100%
+		border: none
+		outline: none
+		opacity: 0
+		cursor: pointer
+		left: 0 
+		top: 0
+		
+
+input[type=file],
+input[type=file]::-webkit-file-upload-button
+	cursor: pointer
+.edit--right
+	right: -23px
+.edit--left 
+	left: -16px
+	transform: translateY(-50%) translateX(-100%)
+.admin-header
+	padding-right: 110px
+.school-head__links-list
+	display: flex 
+	justify-content: center
+	margin-bottom: 30px
+	a 
+		color: #fff
+		margin: 0 40px
+		font-size: 20px
+	a.active,
+	a:hover 
+		color: $yellow
+		text-decoration: underline
+.school-head--admin
+	padding-top: 50px
+	.school-about-items
+
+.edit-img-wrap
+	position: relative	
+.school-single-image
+	position: relative
+
+.school-single-image__overlay
+	position: absolute 
+	top: 0 
+	left: 0 
+	width: 100% 
+	height: 100% 
+	background: rgba(#2756C3, .58)
+	display: flex 
+	justify-content: center 
+	align-items: center
+
+.edit-btn
+	width: 201px 
+	height: 48px
+	background: #fff
+	border-radius: 24px
+	display: flex 
+	justify-content: center
+	align-items: center
+	color: $blue2
+	cursor: pointer
+	position: relative
+	img 
+		margin-right: 13px
+	input 
+		position: absolute
+		width: 100% 
+		height: 100% 
+		opacity: 0
+//end school page
+
+.popup-new-page
+	.input-wrapper
+		margin-bottom: 20px
+	textarea 
+		height: 126px
+.popup-footer
+	display: flex 
+	justify-content: center
+.tabs
+	display: flex
+	.tab 
+		margin-right: 56px
+		cursor: pointer
+		h2 
+			color: #B2C4ED
+	.tab.active h2
+		color: $blue2 
+		text-decoration: underline
+.tab-content
+	display: none
+// .tab-content:nth-child(2)
+// 	display: block
+.input-label
+	display: flex 
+	justify-content: space-between
+.new-page-img
+	width: 100%
+.uploud-content
+	text-align: center
+	margin-top: 80px
+	position: relative
+	img 
+		margin-bottom: 34px
+	input 
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0 
+		left: 0
+		opacity: 0
+
+.uplaud-title
+	font-size: 46px 
+	color: #B2C4ED
+.uplaud-text
+	font-size: 26px
+	color: #7183AD
+	margin-top: 10px
+	margin-bottom: 100px
+.detail-single
+	display: flex 
+	justify-content: center
+.school-single__detail
+	position: relative
+.new-page
+	position: absolute
+	right: 0
+	transform: translateX(100%)
+	display: flex 
+	align-items: center
+	color: #7183AD
+	font-size: 20px
+	cursor: pointer
+	img 
+		margin-right: 10px
+.school-single__title
+	position: relative
+	display: inline-block
+.school-single__title--edit
+	border: 1px solid $blue2
+	padding: 25px
+	outline: none
+	.edit
+		outline: none
+		border: none
+.p-wrapper
+	position: relative
+	border: 1px solid $blue2
+	padding: 25px
+	outline: none
+.slider4 
+	.slick-dots
+		//transform: translateY(-40px)
+		margin-bottom: 0
+		margin-top: -45px
+		position: relative
+		padding-bottom: 20px
+	.slick-dots li
+		margin: 0 2.5px
+	.slick-dots li button
+		background: #fff
+	.slick-dots li.slick-active
+		padding: 0
+		border: none
+		
+		button
+			border: 2px solid #3B5266			
+			height: 12px
+			max-height: 12px 
+			width: 12px
+			max-height: 12px
+.filter-admin
+	width: 100%
+	display: flex
+	.filter__select-wrapper
+		margin-right: 31px
+.filter__items--admin
+	align-items: flex-end
+.new-event__button
+	display: flex
+	width: 155px 
+	height: 39px
+	align-items: center
+	color: rgba(#000000, .58)
+	background: $yellow
+	justify-content: center
+	border-radius: 20px
+	cursor: pointer
+	img 
+		margin-left: 12px
+.popup-new-event
+	display: block
+.popup__content--new-event
+	width: 1142px
+	.input-col
+		padding-right: 5%
+	.input-col-left
+		padding-left: 5%
+.event-image-wrapper
+	position: relative
+.event-image__overlay
+	background: rgba(#B2C4ED, 0.55)
+	position: absolute 
+	top: 0 
+	left: 0 
+	width: 100% 
+	height: 100%
+	display: flex 
+	justify-content: center 
+	align-items: center
+.event-image-buttons
+	.event-button
+		width: 216px 
+		height: 55px
+		display: flex 
+		justify-content: center 
+		align-items: center 
+		border-radius: 28px 
+		color: #fff
+		cursor: pointer
+		position: relative
+
+		input 
+			width: 100% 
+			height: 100% 
+			font-size: 0.7vw
+			position: absolute 
+			top: 0 
+			left: 0 
+			width: 100% 
+			height: 100%
+			opacity: 0
+	.event-button:hover 
+		background: $blue
+	.event-button--blue
+		background: $blue2
+		margin-bottom: 52px
+	.event-button--red
+		background: #D10000
+	.event-button--red:hover 
+		background: #C30303
+.date-select-wrapper
+	display: flex
+	justify-content: space-between
+	select:first-child,
+	select:last-child 
+		width: 22%
+	select:nth-child(2)
+		width: 45%
+.time-wrapper
+	display: flex
+	justify-content: space-between
+	.input-wrapper:first-child,
+	.input-wrapper:nth-child(2) 
+		width: 22%
+	.input-wrapper:last-child
+		width: 45%
+.presentation-select-wrapper
+	display: flex 
+	justify-content: space-between
+	.input-wrapper:first-child
+		width: 40%
+	.input-wrapper:last-child
+		width: 50%
+.presentation-row
+	padding-top: 73px
+	padding-bottom: 62px
+	h3 
+		margin-bottom: 30px
+.presentation-slot__row
+	display: flex
+	white-space: nowrap
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 23px
+.presentation-slot__text
+	color: $blue2 
+	font-size: 20px
+	padding-right: 63px
+	padding-left: 28px
+	position: relative
+.presentation-slot__text:before 
+	content: ''
+	background: $blue2
+	height: 10px 
+	width: 10px
+	display: block 
+	position: absolute 
+	top: 50% 
+	left: 0
+	transform: translateY(-50%)
+	border-radius: 50%
+.tip-title
+	font-size: 20px
+	color: $blue2
+.tip-text
+	color: #7183AD
+	margin-bottom: 0 
+	margin-top: 30px
+.tip-col 
+	padding-left: 5%
+.presentation-item
+	.blue-button
+		cursor: pointer
+.slider-det.active .presentation-item
+	opacity: 0.44
+	pointer-events: none
+.slider-det.active
+	.presentation-item.book
+		opacity: 1
+		position: relative
+		.blue-button
+			background: $yellow
+			width: auto
+			padding: 0 15px
+	
+.presentation-item.book
+	opacity: 1
+	position: relative
+	.blue-button
+		background: $yellow
+		width: auto
+		padding: 0 15px	
+.presentation-item.book:before 
+	content: url('../img/bell2.svg')
+	position: absolute
+	top: 0 
+	right: 0
+	transform: translateX(40%) translateY(-40%)	
+.program 
+	padding-top: 50px
+	.slider5 
+		img 
+			width: 99%
+
+	.slick-dots 
+		margin-top: -60px
+		z-index: 999
+		position: relative
+.project-history
+	padding-top: 100px
+.project-history__row
+	margin-bottom: 40px 
+	display: flex
+	.project-history__col
+		width: 110px
+		padding-right: 24px
+.project-history__year
+	color: $blue2
+	border: 1px solid $blue2
+	padding: 8px 25px
+	border-radius: 20px
+.project-history__text
+	color: #7183AD
+
+
+// start review section
+.review
+	background: $light-blue
+	padding: 60px 0
+.review-slider
+	padding-top: 40px
+.review-item
+	background: #fff
+	margin: 8px
+	color: #7183AD
+.review-item__header
+	padding: 17px 30px 13px 30px
+	border-bottom: 1px solid #EEEEEE
+	display: flex 
+	justify-content: space-between 
+	align-items: center
+.review-item__content
+	padding: 30px
+.review-item__header-name
+	color: $blue2
+	font-size: 20px
+.review-slider
+	.slider2 
+		.slick-dots
+			margin-top: 30px
+			li
+				width: 10px 
+				height: 10px
+				max-width: 10px
+				max-height: 10px 
+				button 
+					background: $blue2
+					width: 10px 
+					height: 10px
+					max-height: 10px 
+					max-width: 10px
+			li.slick-active
+				width: 10px 
+				height: 10px
+				max-width: 10px
+				max-height: 10px 
+				border: none
+				button
+					background: transparent
+					border: 1px solid $blue2
+					width: 10px 
+					height: 10px
+					max-height: 10px 
+					max-width: 10px
+//end review section
+
+//start philosophy 
+.philosophy 
+	padding-top: 50px 
+	padding-bottom: 80px
+	p 
+		margin-bottom: 0 
+		margin-top: 30px
+.object-item
+	border-radius: 4px
+	overflow: hidden
+
+.object
+	background: $light-blue
+	padding-top: 47px
+	padding-bottom: 60px
+.object-item
+	margin-top: 32px
+	background: #fff
+	border-radius: 4px
+	display: flex
+.object-item__content
+	padding: 47px
+	p 
+		margin-bottom: 0 
+		margin-top: 35px
+		max-width: 500px
+
+//end philosophy
+
 @import "media"
+
+
 
 
 

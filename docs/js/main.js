@@ -24,6 +24,59 @@ $('.sign-in').click(function(){
     
   });
 
+$('.new-event__button').click(function(){
+    $('.popup-new-event').fadeIn();
+    
+  });
+
+$('.presentation-item-detail').click(function(){
+    $(this).parent().find('.presentation-details-popup-wrap').slideToggle();    
+  });
+$('.presentation-popup__close').click(function(){
+    $(this).parent().parent().parent().slideUp();    
+  });
+
+
+$('.cumpus').click(function(){
+    $('.popup-cumpus').fadeIn();
+    
+  });
+$('.about-school').click(function(){
+    $('.popup-about').fadeIn();
+    
+  });
+$('.missions').click(function(){
+    $('.popup-missions').fadeIn();
+    
+  });
+$('.broochure-edit').click(function(){
+    $('.popup-new-page').fadeIn();
+    $(".tab-content:nth-child(2)").fadeIn();
+    $(".tab:nth-child(2)").addClass('active');
+    $(".tab:first-child").removeClass('active');
+    
+  });
+
+$('.new-page').click(function(){
+    $('.popup-new-page').fadeIn();
+    $(".tab-content:first-child").fadeIn();
+    $(".tab:nth-child(2)").removeClass('active');
+    $(".tab:first-child").addClass('active');
+    
+  });
+
+  $(".tab").click(function() {
+  $(".tab").removeClass("active").eq($(this).index()).addClass("active");
+  $(".tab-content").hide().eq($(this).index()).fadeIn()
+}).eq(0).addClass("active");
+
+// $('.edit').click(function(){
+//     $(this).parent().attr("contenteditable", true);
+    
+//   });
+
+
+
 $('.sign-up').click(function(){
     $('.popup-signup').fadeIn();
     
@@ -31,6 +84,22 @@ $('.sign-up').click(function(){
 $('.popup-close').click(function(){
     $('.popup').fadeOut();
     
+  });
+
+
+$('.presentation-item .blue-button').click(function(){
+    $(this).parent().parent().parent().addClass('active');
+    $(this).parent().addClass('book');
+    $(this).text('Your seat is reserved');
+    $(this).parent().find('.presentation-item-detail').text('You will be notified via email.');  
+  });
+
+$('.presentation-details-popup-wrap .blue-button').click(function(){
+    $(this).parent().parent().parent().hide();
+    $(this).parent().parent().parent().parent().parent().addClass('book');
+     $(this).parent().parent().parent().parent().parent().find('.blue-button').text('Your seat is reserved');
+$(this).parent().parent().parent().parent().parent().find('.presentation-item-detail').text('You will be notified via email.');
+   
   });
 
 jQuery(function($){
@@ -116,6 +185,24 @@ $('.slider2').slick({
   ]
 });
 
+$('.slider4').slick({
+  prevArrow: false,
+  nextArrow: false,
+  slidesToShow: 1,
+  dots: true
+  
+});
+
+$('.slider5').slick({
+  prevArrow: false,
+  nextArrow: false,
+  slidesToShow: 1,
+  dots: true
+  
+});
+
+
+
  if( window.innerWidth <= 768 ){
 $('.slider3').slick({
   prevArrow: false,
@@ -130,6 +217,22 @@ $('.slider3').slick({
 }
 
 
+ if( window.innerWidth <= 768){
+window.onresize = function () {
+
+        location.reload();
+    
+};
+ }
+
+// var oldWidth = window.innerWidth;
+// window.onresize = function () {
+
+//         location.reload();
+    
+// };
+
+
 $('.more').click(function(){
 		$(this).parent().find('.how-it-work__item-p').slideToggle();
 		$(this).toggleClass('active');
@@ -138,9 +241,3 @@ $('.more').click(function(){
 
 });
 
-var oldWidth = window.innerWidth;
-window.onresize = function () {
-
-        location.reload();
-    
-};
